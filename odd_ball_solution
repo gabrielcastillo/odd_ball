@@ -1,0 +1,25 @@
+function odd_ball( $odd )
+    {
+        $stage = array();
+        $num = '0';
+
+        foreach( $odd as $ball ) {
+            
+            // Check if int is a negative value
+            if ( $ball < 0 ) {
+                $stage[] .= $ball;
+            } elseif ( ( $ball % 2 ) != 0) {
+                $stage[] .= $ball;
+            }
+        }
+        
+        foreach( $stage as $value ){
+            $num += $value;
+        }
+        
+        return $num;
+    }
+
+    $array = [1,2,1];
+    echo odd_ball($array);
+    exit;
